@@ -1,0 +1,8 @@
+all:
+    echo left or right
+
+left:
+    make -C ../../../.. ferris/sweep:pistahh-cdh-hu:dfu-split-left
+
+right:
+    make -C ../../../.. ferris/sweep:pistahh-cdh-hu:dfu-split-right
