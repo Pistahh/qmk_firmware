@@ -58,8 +58,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		    KC_TRNS,  KC_TRNS,      KC_TRNS, KC_TRNS),
 			  
 	[_NAV] = LAYOUT_split_3x5_2(
-		KC_TRNS,      KC_TRNS,      KC_PGUP,         KC_TRNS,        KC_TRNS,
-		KC_TRNS,      KC_TRNS,      KC_TRNS,         KC_TRNS,        KC_TRNS,
+		KC_TRNS,      KC_TRNS,        KC_PGUP,         KC_TRNS,        KC_TRNS,
+		KC_WWW_BACK,  KC_WWW_FORWARD, KC_TRNS,         KC_TRNS,        KC_TRNS,
 
 		KC_LEFT,      KC_UP,        KC_DOWN,         KC_RGHT,        KC_TRNS,
 		KC_TRNS,      KC_LGUI,      KC_NO,           LCTL(KC_LALT),  LCA(KC_LSFT),
@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		    KC_VOLD,  KC_TRNS,      KC_TRNS,         KC_VOLU
     ),
 	[_FUN] = LAYOUT_split_3x5_2(
-		KC_TRNS,      KC_TRNS,      KC_TRNS,         KC_TRNS,        KC_TRNS,
+		KC_TRNS,      KC_TRNS,      KC_TRNS,         KC_ESC,        KC_PRINT_SCREEN,
 		KC_TRNS,      KC_F7,        KC_F8,           KC_F9,          KC_F10,
 		
 		KC_TRNS,      KC_NO,        LCTL(KC_LALT),   KC_TRNS,        KC_TRNS,
@@ -117,13 +117,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		    KC_TRNS,  KC_TRNS,      KC_TRNS,         KC_TRNS
 	),
 	[_HU_NUM] = LAYOUT_split_3x5_2(
-		KC_PSLS,      HU_7,         HU_8,            HU_9,           KC_PPLS,
+		HU_SLSH,      HU_7,         HU_8,            HU_9,           HU_PLUS,
 		KC_TRNS,      KC_TRNS,      KC_TRNS,         KC_TRNS,        KC_TRNS,
 		
-		HU_0,         HU_1,         HU_2,            HU_3,           KC_PMNS,
+		HU_0,         HU_1,         HU_2,            HU_3,           HU_MINS,
 		KC_TRNS,      KC_TRNS,      KC_TRNS,         KC_NO,          KC_TRNS,
 		
-		KC_PAST,      HU_4,         HU_5,            HU_6,           KC_PEQL,
+		HU_ASTR,      HU_4,         HU_5,            HU_6,           HU_EQL,
 		KC_TRNS,      KC_TRNS,      KC_TRNS,         KC_TRNS,        KC_TRNS,
 		
 		    KC_TRNS,  KC_TRNS,      KC_TRNS,         KC_TRNS
@@ -154,7 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	),
 	[_HU_RSYM] = LAYOUT_split_3x5_2(
 		KC_TRNS,      KC_TRNS,      KC_TRNS,         KC_TRNS,        KC_TRNS,
-		KC_TRNS,      HU_UNDS,      HU_PIPE,         HU_QUOT,        KC_TRNS,
+		HU_QUES,      HU_UNDS,      HU_PIPE,         HU_QUOT,        KC_TRNS,
 		
 		HU_CIRC,      HU_ASTR,      HU_AMPR,         KC_NO,          KC_TRNS,
 		HU_HASH,      HU_TILD,      HU_SLSH,         HU_DQUO,        HU_DLR,
