@@ -11,15 +11,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LSFT_T(HU_A), LCTL_T(HU_R), LALT_T(HU_S), HU_T, HU_G, HU_M, HU_N, LALT_T(HU_E), LCTL_T(HU_I), LSFT_T(HU_O),
         HU_Z,         HU_X,         HU_C,         HU_D, HU_V, HU_K, HU_H, HU_COMM,      HU_DOT,       HU_SLSH,
 
-            LT(LSYM, KC_BSPC), LT(LNAV, KC_SPC),       LT(LNUM, KC_ENT), LT(LFUN, KC_TAB)
+            LT(LSYM, KC_ENT), LT(LNAV, KC_BSPC),       LT(LNUM, KC_SPC), LT(LFUN, KC_TAB)
     ),
 
     [LNAV] = LAYOUT_split_3x5_2(
          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_PGUP, KC_HOME,                KC_UP,   KC_END,   KC_TRNS,
          KC_LSFT, KC_LCTL, KC_LALT, KC_TRNS, KC_TRNS, KC_PGDN, KC_LEFT,                KC_DOWN, KC_RIGHT, KC_TRNS,
-         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_ESC,  KC_TRNS, LSFT_T(LALT_T(KC_ESC)), KC_TRNS, KC_TRNS,  KC_TRNS,
+         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_ESC,  KC_TRNS, LSFT(LALT(KC_ESC)), KC_TRNS, KC_TRNS,  KC_TRNS,
 
-            KC_TRNS,  KC_TRNS,      TO(LMOUSE), KC_TRNS
+            KC_TRNS,  KC_TRNS,      MO(LMOUSE), KC_TRNS
     ),
 
     [LMOUSE] = LAYOUT_split_3x5_2(
@@ -31,9 +31,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [LFUN] = LAYOUT_split_3x5_2(
-        KC_F15, KC_F7, KC_F8, KC_F9, KC_F12, KC_CAPS, KC_WWW_BACK, KC_WWW_FORWARD, KC_PRINT_SCREEN, KC_TRNS,
-        KC_F14, KC_F4, KC_F5, KC_F6, KC_F11, KC_MUTE, KC_VOLD,     KC_VOLU,        KC_TRNS,         KC_TRNS,
-        KC_F13, KC_F1, KC_F2, KC_F3, KC_F10, KC_MPLY, KC_MPRV,     KC_MNXT,        KC_TRNS,         KC_TRNS,
+        KC_PRINT_SCREEN, KC_F7, KC_F8, KC_F9, KC_F12, KC_TRNS, KC_MUTE, KC_VOLD, KC_VOLU, KC_CAPS,
+        KC_WWW_BACK,     KC_F4, KC_F5, KC_F6, KC_F11, KC_INS,  KC_DEL,  KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_WWW_FORWARD,  KC_F1, KC_F2, KC_F3, KC_F10, KC_LGUI, KC_MPLY, KC_MPRV, KC_MNXT, KC_TRNS,
 
             KC_TRNS,  KC_TRNS,      KC_TRNS,         KC_TRNS
     ),
@@ -42,15 +42,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         HU_0,    HU_4,      HU_5,   HU_6,    HU_PLUS,  KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS, KC_TRNS,
         HU_EQL,  HU_1,      HU_2,   HU_3,    HU_MINS,  KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS, KC_TRNS,
 
-            TO(LACCU),  TO(LACCL),      KC_TRNS,         KC_TRNS
+            MO(LACCU),  MO(LACCL),      KC_TRNS,         KC_TRNS
     ),
 
     [LSYM] = LAYOUT_split_3x5_2(
         KC_TRNS, HU_LBRC, HU_RBRC, KC_TRNS, KC_TRNS, HU_AT, HU_DQUO, HU_CIRC, HU_DLR, KC_TRNS,
         KC_TRNS, HU_LPRN, HU_RPRN, HU_LABK, HU_RABK, HU_PERC, HU_QUOT, HU_AT, HU_PIPE, HU_TILD,
-        KC_TRNS, HU_LCBR, HU_RCBR, KC_TRNS, KC_TRNS, HU_EXLM, HU_GRV, HU_HASH, HU_BSLS, KC_TRNS,
+        KC_TRNS, HU_LCBR, HU_RCBR, HU_QUES, HU_EXLM, HU_COLN, HU_GRV, HU_HASH, HU_BSLS, KC_TRNS,
 
-            KC_TRNS,  KC_TRNS,      KC_TRNS,         KC_TRNS
+            KC_TRNS,  KC_TRNS,      HU_UNDS,         KC_TRNS
     ),
 
     [LACCL] = LAYOUT_split_3x5_2(
