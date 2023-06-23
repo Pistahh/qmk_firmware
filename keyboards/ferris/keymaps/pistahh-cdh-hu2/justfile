@@ -1,8 +1,11 @@
 all:
-    echo left or right
+    echo left or right or push
 
 left:
     make -C ../../../.. ferris/sweep:pistahh-cdh-hu2:dfu-split-left
 
 right:
     make -C ../../../.. ferris/sweep:pistahh-cdh-hu2:dfu-split-right
+
+push:
+    git add -A . && git commit -m "Updates" && git push
