@@ -15,8 +15,11 @@
  */
 
 #pragma once
+#define ENCODER_RESOLUTION 2
+#define TAPPING_TERM 500
+#define PERMISSIVE_HOLD
 
 // Not yet available in `info.json`
 #ifdef OLED_ENABLE
-#   define OLED_FONT_H "keyboards/splitkb/aurora/lily58/glcdfont.c"
+#    define OLED_FONT_H "keyboards/splitkb/aurora/lily58/glcdfont.c"
 #endif
