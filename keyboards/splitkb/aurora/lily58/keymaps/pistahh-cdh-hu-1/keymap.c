@@ -42,18 +42,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_LALT, KC_LGUI, MO(_LOWER), KC_SPC, KC_ENT, MO(_RAISE), KC_BSPC, KC_RGUI
 ), */
  [_COLE] = LAYOUT(
-  KC_ESC,   HU_1,         HU_2,         HU_3,         HU_4,     HU_5,                            HU_6,   HU_7,    HU_8, HU_9,         HU_0,        KC_GRV,
-  KC_TAB,   HU_Q,         HU_W,         HU_F,         LT(_ACC,HU_P), HU_B,                       HU_J,   LT(_ACC,HU_L), HU_U,         HU_Y,         LT(_ADJUST, HU_SCLN),     KC_MINS,
-  LSFT(KC_2),  LSFT_T(HU_A), LCTL_T(HU_R), LALT_T(HU_S), LT(_NAV,HU_T), HU_G,                       HU_M,   LT(_NAV, HU_N),          LALT_T(HU_E), LCTL_T(HU_I), LSFT_T(HU_O), KC_QUOT,
-  KC_LSFT,  HU_Z,         HU_X,         HU_C,         LT(_SYM,HU_D), HU_V,    KC_LBRC,  KC_RBRC, HU_K,   LT(_SYM,HU_H), HU_COMM,      HU_DOT,       HU_SLSH,      KC_RSFT,
+  KC_ESC,   HU_1,         HU_2,         HU_3,         HU_4,     HU_5,                             HU_6,   HU_7,    HU_8, HU_9,         HU_0,        KC_GRV,
+  KC_TAB,   HU_Q,         HU_W,         HU_F,         HU_P, LT(_ACC, HU_B),                       LT(_ACC, HU_J),   HU_L, HU_U,         HU_Y,         LT(_ADJUST, HU_EQL),     KC_MINS,
+  LSFT(KC_2),  LSFT_T(HU_A), LCTL_T(HU_R), LALT_T(HU_S), LT(_SYM,HU_T), HU_G,                       HU_M,   LT(_SYM, HU_N),          LALT_T(HU_E), LCTL_T(HU_I), LSFT_T(HU_O), KC_QUOT,
+  KC_LSFT,  HU_Z,         HU_X,         HU_C,         LT(_NAV,HU_D), HU_V,    KC_MUTE,  KC_RBRC, HU_K,   LT(_NAV,HU_H), HU_COMM,      HU_DOT,       HU_SCLN,      HU_SLSH,
                           KC_LGUI,      KC_ESC,      KC_TAB,      KC_BSPC, KC_ENT,   KC_SPC,  KC_DEL, KC_ESC
 ),
 [_NAV] = LAYOUT(
-  _______, _______, _______, _______, _______, _______,                   KC_WWW_BACK, KC_WWW_FORWARD, _______,_______, _______, _______,
-  _______, _______, _______, _______, _______, _______,                   KC_PGUP,     KC_HOME,        KC_UP, KC_END, _______, _______,
-  _______, _______, _______, _______, _______, _______,                   KC_PGDN,     KC_LEFT,        KC_DOWN, KC_RIGHT, _______, _______,
-  _______, _______, _______, _______, _______, _______, _______, _______, _______,     KC_ESC,  _______,_______, _______, _______,
-                             _______, LSFT(KC_DEL),  LCTL(KC_INS), LSFT(KC_INS),  _______, _______, _______, _______
+  _______, _______, _______,    _______,    _______,     _______,                   KC_WWW_BACK, KC_WWW_FORWARD, _______,_______, _______, _______,
+  _______, KC_MS_ACCEL0, KC_WH_L,    KC_MS_UP,   KC_WH_R,     KC_WH_U,                   KC_PGUP,     KC_HOME,        KC_UP, KC_END, _______, _______,
+  _______, KC_MS_ACCEL1, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_WH_D,                   KC_PGDN,     KC_LEFT,        KC_DOWN, KC_RIGHT, _______, _______,
+  _______, KC_MS_ACCEL2, KC_MS_BTN2, KC_MS_BTN3, KC_MS_BTN1,  _______, _______, _______, _______,     _______,  _______,_______, KC_CAPS, _______,
+                             _______, LSFT(KC_DEL),  LCTL(KC_INS), LSFT(KC_INS),  _______, HU_UNDS, _______, _______
 ),
 
 [_ACC] = LAYOUT(
@@ -66,10 +66,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_SYM] = LAYOUT(
   KC_F12,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,   KC_F7,   KC_F8,  KC_F9, KC_F10, KC_F11,
-  _______, HU_EXLM, HU_LCBR, HU_RCBR, HU_PIPE, HU_ASTR,                   HU_PERC, HU_QUOT, HU_LPRN, HU_RPRN, HU_GRV,  _______,
-  _______, HU_AT,   HU_AMPR, HU_BSLS, HU_SLSH, HU_EQL,                    HU_PLUS, HU_DQUO, HU_MINS, HU_QUES, HU_TILD, _______,
+  _______, HU_EXLM, HU_LCBR, HU_RCBR, HU_PIPE, HU_ASTR,                   HU_PERC, HU_DQUO, HU_LPRN, HU_RPRN, HU_GRV,  _______,
+  _______, HU_AT,   HU_AMPR, HU_BSLS, HU_SLSH, HU_EQL,                    HU_PLUS, HU_QUOT, HU_MINS, HU_QUES, HU_TILD, _______,
   _______, HU_CIRC, HU_LABK, HU_RABK, HU_COLN, HU_HASH, _______, _______, HU_GRV,  HU_DLR,  HU_LBRC, HU_RBRC, _______, _______,
-                             _______, _______, _______, _______, _______, HU_UNDS, _______, _______
+                             _______, LSFT(KC_DEL),  LCTL(KC_INS), LSFT(KC_INS), _______, HU_UNDS, _______, _______
 ),
 
 [_EMPTY] = LAYOUT(
