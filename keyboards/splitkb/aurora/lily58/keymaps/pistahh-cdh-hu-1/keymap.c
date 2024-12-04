@@ -12,6 +12,8 @@ enum layer_number {
     _NAV,
     _ACC,
     _SYM,
+    _NUM,
+    _FUN,
     _EMPTY,
 };
 
@@ -42,11 +44,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_LALT, KC_LGUI, MO(_LOWER), KC_SPC, KC_ENT, MO(_RAISE), KC_BSPC, KC_RGUI
 ), */
  [_COLE] = LAYOUT(
-  KC_ESC,   HU_1,         HU_2,         HU_3,         HU_4,     HU_5,                             HU_6,   HU_7,    HU_8, HU_9,         HU_0,        KC_GRV,
-  KC_TAB,   HU_Q,         HU_W,         HU_F,         HU_P, LT(_ACC, HU_B),                       LT(_ACC, HU_J),   HU_L, HU_U,         HU_Y,         LT(_ADJUST, HU_EQL),     KC_MINS,
-  LSFT(KC_2),  LSFT_T(HU_A), LCTL_T(HU_R), LALT_T(HU_S), LT(_SYM,HU_T), HU_G,                       HU_M,   LT(_SYM, HU_N),          LALT_T(HU_E), LCTL_T(HU_I), LSFT_T(HU_O), KC_QUOT,
-  KC_LSFT,  HU_Z,         HU_X,         HU_C,         LT(_NAV,HU_D), HU_V,    KC_MUTE,  KC_RBRC, HU_K,   LT(_NAV,HU_H), HU_COMM,      HU_DOT,       HU_SCLN,      HU_SLSH,
-                          KC_LGUI,      KC_ESC,      KC_TAB,      KC_BSPC, KC_ENT,   KC_SPC,  KC_DEL, KC_ESC
+  KC_ESC,   HU_1,            HU_2,         HU_3,          HU_4,          HU_5,                             HU_6,           HU_7,           HU_8,          HU_9,         HU_0,                KC_GRV,
+  KC_TAB,   HU_Q,            HU_W,         LT(_FUN,HU_F), LT(_NUM,HU_P), LT(_ACC, HU_B),                   LT(_ACC, HU_J), LT(_NUM,HU_L),  LT(_FUN,HU_U), HU_Y,         LT(_ADJUST, HU_EQL), KC_MINS,
+  LSFT(KC_2),  LSFT_T(HU_A), LCTL_T(HU_R), LALT_T(HU_S),  LT(_SYM,HU_T), HU_G,                             HU_M,           LT(_SYM, HU_N), LALT_T(HU_E),  LCTL_T(HU_I), LSFT_T(HU_O),        KC_QUOT,
+  KC_LSFT,  HU_Z,            HU_X,         HU_C,          LT(_NAV,HU_D), HU_V,          KC_MUTE,  KC_RBRC, HU_K,           LT(_NAV,HU_H),  HU_COMM,       HU_DOT,       HU_SCLN,             HU_SLSH,
+                             KC_LGUI,      KC_ESC,        KC_TAB,        KC_BSPC,       KC_ENT,   KC_SPC,  KC_DEL,         KC_ESC
 ),
 [_NAV] = LAYOUT(
   _______, _______, _______,    _______,    _______,     _______,                   KC_WWW_BACK, KC_WWW_FORWARD, _______,_______, _______, _______,
@@ -72,6 +74,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                              _______, LSFT(KC_DEL),  LCTL(KC_INS), LSFT(KC_INS), _______, HU_UNDS, _______, _______
 ),
 
+  [_FUN] = LAYOUT(
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, KC_F10,  KC_F11,  KC_F12,  XXXXXXX, XXXXXXX,                   XXXXXXX, KC_F1,   KC_F2,   KC_F3,   XXXXXXX, XXXXXXX,
+  XXXXXXX, KC_F13,  KC_F14,  KC_F15,  XXXXXXX, XXXXXXX,                   XXXXXXX, KC_F4,   KC_F5,   KC_F6,   XXXXXXX, XXXXXXX,
+  XXXXXXX, KC_F16,  KC_F17,  KC_F18,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F7,   KC_F8,   KC_F9,   XXXXXXX, XXXXXXX,
+                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  HU_0, XXXXXXX, XXXXXXX
+  ),
+  [_NUM] = LAYOUT(
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, HU_1,    HU_2,    HU_3,    XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, HU_4,    HU_5,    HU_6,    XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, HU_7,    HU_8,    HU_9,    XXXXXXX, XXXXXXX,
+                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  HU_0, XXXXXXX, XXXXXXX
+  ),
 [_EMPTY] = LAYOUT(
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______,_______, _______, _______,
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______,_______, _______, _______,
