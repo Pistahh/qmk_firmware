@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, _______, _______, _______, _______,                   _______, HU_UDIA, HU_UACU, HU_UDAC, _______, _______,
   _______, LSFT_T(HU_AACU), _______, _______, _______, _______,           _______, _______, HU_EACU, HU_IACU, LSFT_T(HU_OACU), _______,
   _______, _______, HU_UDIA, HU_UACU, HU_UDAC, _______, _______, _______, _______, HU_ODIA, HU_OACU,HU_ODAC, _______, _______,
-                             _______, _______, _______, _______, _______,  _______, _______, _______
+                             QK_BOOT, _______, _______, _______, _______,  _______, _______, QK_BOOT
 ),
 
 [_SYM] = LAYOUT(
@@ -76,10 +76,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_FUN] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, KC_F10,  KC_F11,  KC_F12,  XXXXXXX, XXXXXXX,                   XXXXXXX, KC_F1,   KC_F2,   KC_F3,   XXXXXXX, XXXXXXX,
-  XXXXXXX, KC_F13,  KC_F14,  KC_F15,  XXXXXXX, XXXXXXX,                   XXXXXXX, KC_F4,   KC_F5,   KC_F6,   XXXXXXX, XXXXXXX,
-  XXXXXXX, KC_F16,  KC_F17,  KC_F18,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F7,   KC_F8,   KC_F9,   XXXXXXX, XXXXXXX,
-                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  HU_0, XXXXXXX, XXXXXXX
+  XXXXXXX, XXXXXXX, KC_F10,  KC_F11,  KC_F12,  XXXXXXX,                   XXXXXXX, KC_F1,   KC_F2,   KC_F3,   XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, KC_F13,  KC_F14,  KC_F15,  XXXXXXX,                   XXXXXXX, KC_F4,   KC_F5,   KC_F6,   XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, KC_F16,  KC_F17,  KC_F18,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F7,   KC_F8,   KC_F9,   XXXXXXX, XXXXXXX,
+                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, HU_0, XXXXXXX, XXXXXXX
   ),
   [_NUM] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
